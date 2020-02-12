@@ -1,0 +1,85 @@
+header
+  header-menu
+    header-menu__item
+    header-menu__item
+    header-menu__item
+introduction
+  introduction__info
+    introduction__title
+    introduction__subtitle
+    introduction__sign-up-button
+  image-block
+    image-block__image
+    image-block_edit-button
+    image-block__description
+    image-block__likes
+description-section
+  text-block
+    text-block__title
+    text-block__subtitle
+  text-block
+    text-block__title
+    text-block__subtitle
+  decription-section__create-acc-button
+  description-section__image
+video-section
+  video-section__video
+  banner-block
+    banner-block__headline
+      banner-block__title
+      banner-block__description
+    banner-block__buy-button
+    banner-block__demo-button
+features-section
+  card-block
+    card-block__image
+    card-block__title
+    card-block__description
+    card-block__button
+  card-block
+    card-block__image
+    card-block__title
+    card-block__description
+    card-block__button
+  card-block
+    card-block__image
+    card-block__title
+    card-block__description
+    card-block__button
+  features-section__pointer
+pricing-section
+  prising-section__heading
+    prising-section__title
+    prising-section__subtitle
+  account-card
+    account-card__heading
+    account-card__decription
+    account-card__price
+    account-card__list
+    account-card__button
+    account-card__users
+  account-card
+    account-card__heading
+    account-card__decription
+    account-card__price
+    account-card__list
+    account-card__button
+    account-card__users
+footer
+  footer-menu
+    footer-menu__title
+    footer-menu__item
+    footer-menu__item
+    footer-menu__item
+    footer-menu__item
+  footer-menu
+    footer-menu__title
+    footer-menu__item
+    footer-menu__item
+    footer-menu__item
+  footer-menu__
+    footer-menu__title
+    footer-menu__item
+    footer-menu__item
+    footer-menu__item
+  footer__icon
