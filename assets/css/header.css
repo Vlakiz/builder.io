@@ -1,0 +1,28 @@
+.header {
+    position: absolute;
+    width: 100%;
+    right: 260px;
+    z-index: 999999;
+}
+
+.header ul {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 55px;
+}
+
+.header ul li {
+    margin-right: 27px;
+    padding-bottom: 13px;
+}
+
+.header ul li a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+}
+
+.header ul li:hover {
+    border-bottom: 2px solid white;
+}

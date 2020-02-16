@@ -1,205 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="utf-8" />
-      <title>Builder.io</title>
-   </head>
-   <body>
-       <header class="header">
-           <ul class="header-menu">
-               <li class="header-menu__item">
-                   <a href="#">Sign Up</a>
-               </li>
-               <li class="header-menu__item">
-                   <a href="#">Log In</a>
-               </li>
-               <li class="header-menu__item">
-                   <a href="#">Support</a>
-               </li>
-           </ul>
-       </header>
-       <main>
-           <section class="introduction">
-               <div class="introduction__info">
-                   <h1 class="introduction__title">Builder.io</h1>
-                   <h3 class="introduction__subtitle">
-                       Builder.io lets you generate unique HTML website templates talloried for desigers.
-                    </h3>
-                   <a class="introduction__sign-up-button" href="#">SIGN UP</a>
-               </div>
-               <div class="image-block">
-                   <img src="./assets/img/forest.png" alt="" class="">
-                   <button class="image-block__edit-button">
-                       <img src="./assets/img/icon-document-edit.png" alt="">
-                   </button>
-                   <p class="image-block__description">
-                       A warm weekend away
-                       <span class="image-block__date">24th August 2015</span>
-                    </p>
-                   <button class="image-block__likes">
-                       <img src="./assets/img/fa-heart-o.png" alt="">
-                   </button>
-               </div>
-            </section>
-           <section class="decsription-section">
-               <div class="text-block">
-                   <h4 class="text-block__title">Work with your hands</h4>
-                   <p class="text-block__subtitle">
-                       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
-                       incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-                    </p>
-               </div>
-               <div class="text-block">
-                   <h4 class="text-block__title"> Optimised for the road</h4>
-                   <p class="text-block__subtitle">
-                       Builder not only works great on a desktop or laptop but has also been optimised 
-                       to be just as easy to use on a table or mobile device.
-                   </p>
-               </div>
-                <button class="decription-section__create-acc-button">CREATE ACCOUNT</button>
-                <img src="./assets/img/Phone.png" alt="" class="description-section__image">
-            </section>
-           <section class="video-section">
-               <video src="#"></video>
-               <div class="banner-block">
-                   <div class="banner-block__headline">
-                       <h4 class="banner-block__title">TAKE A LOOK INSIDE</h4>
-                       <p class="banner-block__description">
-                           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
-                           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                           quis nostrud exercitation ullamco laboris nisi ut aliquip.
-                       </p>
-                   </div>
-                   <a class="banner-block__buy-button" href="#">TAKE MY MONEY</a>
-                   <a class="banner-block__demo-button" href="#">FREE ACCOUNT</a>
-               </div>
-            </section>
-           <section class="features-section">
-               <div class="card-block">
-                   <img src="./assets/img/fa-area-chart.png" alt="" class="card-block__image">
-                   <h5 class="card-block__title">Pick you layouts</h5>
-                   <p class="card-block__description">
-                       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
-                       incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-                    </p>
-                   <a class="card-block__button" href="#">Create Account here</a>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Builder.io</title>
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/css/common.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/introduction.css">
+    <link rel="stylesheet" href="./assets/css/description.css">
+    <link rel="stylesheet" href="./assets/css/video.css">
+    <link rel="stylesheet" href="./assets/css/features.css">
+    <link rel="stylesheet" href="./assets/css/pricing.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+    <link href="https://fonts.googleapis.com/css?family=Sintony:Regular&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:Bold&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:Regular&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:Medium&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:Semi-Bold&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <ul class="header-menu">
+            <li class="header-menu__item">
+                <a href="#sign-up">Sign Up</a>
+            </li>
+            <li class="header-menu__item">
+                <a href="#">Log In</a>
+            </li>
+            <li class="header-menu__item">
+                <a href="#">Support</a>
+            </li>
+        </ul>
+    </header>
+    <main>
+        <section class="introduction">
+            <div class="introduction__info">
+                <h1 class="introduction__title">Builder.io</h1>
+                <h3 class="introduction__subtitle">
+                    Builder.io lets you generate unique HTML website templates talloried for desigers.
+                </h3>
+                <form action="#sign-up">
+                    <button class="introduction__sign-up-button">SIGN UP</button>
+                </form>
+            </div>
+            <div class="image-block">
+                <img src="./assets/img/forest.png" alt="" class="">
+                <button class="image-block__edit-button">
+                    <img src="./assets/img/icon-document-edit.png" alt="">
+                </button>
+                <p class="image-block__description">
+                    A warm weekend away
+                </p>
+                <p class="image-block__date">24th August 2015</p>
+                <div class="image-block__likes">
+                    <button class="image-block__likes-button"></button>
+                    <p class="image-block__likes-count">100</p>
                 </div>
-               <div class="card-block">
-                   <img src="./assets/img/fa-archive.png" alt="" class="card-block__image">
-                   <h5 class="card-block__title">Export</h5>
-                   <p class="card-block__description">
-                       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
-                       incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+            </div>
+        </section>
+        <section class="description-section">
+            <div class="description-section__info">
+                <div class="text-block">
+                    <h4 class="text-block__title">Work with your hands</h4>
+                    <p class="text-block__subtitle">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
                     </p>
-                   <a class="card-block__button" href="#">See pricing</a>
+                </div>
+                <div class="text-block">
+                    <h4 class="text-block__title"> Optimised for the road</h4>
+                    <p class="text-block__subtitle">
+                        Builder not only works great on a desktop or laptop but has also been optimised
+                        to be just as easy to use on a table or mobile device.
+                    </p>
+                </div>
+            </div>
+            <button class="decription-section__create-acc-button">CREATE ACCOUNT</button>
+            <img src="./assets/img/Phone.png" alt="" class="description-section__image">
+        </section>
+        <section class="video-section">
+            <div class="banner-block">
+                <div class="banner-block__headline">
+                    <h4 class="banner-block__title">TAKE A LOOK INSIDE</h4>
+                    <p class="banner-block__description">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip.
+                    </p>
+                </div>
+                <div class="banner-block__buttons">
+                    <a class="banner-block__buy-button" href="#">TAKE MY MONEY!</a>
+                    <a class="banner-block__demo-button" href="#">FREE ACCOUNT</a>
+                </div>
+            </div>
+            <div class="video-block">
+                <button class="video-block__play-button"></button>
+            </div>
+        </section>
+        <section class="features-section">
+            <div class="features-cards-wrap">
+                <div class="card-block">
+                    <img src="./assets/img/fa-area-chart.png" alt="" class="card-block__image">
+                    <h5 class="card-block__title">Pick you layouts</h5>
+                    <p class="card-block__description">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                    </p>
+                    <a class="card-block__button" href="#sign-up">Create Account here</a>
+                </div>
+                <div class="card-block">
+                    <img src="./assets/img/fa-archive.png" alt="" class="card-block__image">
+                    <h5 class="card-block__title">Export</h5>
+                    <p class="card-block__description">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                    </p>
+                    <a class="card-block__button" href="#">See pricing</a>
                 </div>
                 <div class="card-block">
                     <img src="./assets/img/fa-arrows-alt.png" alt="" class="card-block__image">
                     <h5 class="card-block__title">Edit</h5>
                     <p class="card-block__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
                     </p>
                     <a class="card-block__button" href="#">View Support Documents</a>
                 </div>
-            </section>
-           <section class="pricing-section">
-               <div class="pricing-section__heading">
-                   <h4 class="pricing-section__title">CHOOSE A SUBSCRIPTION</h4>
-                   <p class="pricing-section__subtitle">
-                       A interface built by deigners, for designers. What a clice tag line lol.
-                   </p>
-               </div>
-               <div class="account-card">
-                   <h5 class="account-card__heading">FREE ACCOUNT</h5>
-                   <p class="account-card__decription">
-                       Great for giving it a try or the one off web designer
-                   </p>
-                   <p class="account-card__price">Free</p>
-                   <div class="account-card__list">
-                       <hr>
-                       Save up to 2 layouts
-                       <hr>
-                       Export 1 HTML template
-                       <hr>
-                       15 Layout Options
-                       <hr>
-                       Tweet to get more layouts
-                   </div>
-                   <a class="account-card__button" href="#">SIGN UP</a>
-                   <p class="account-card__users">
-                       Join 
-                       <span class="account-card__users-count">34,293</span> 
+            </div>
+            <!--
+            <div class="scrolling-bar">
+                <button class="scrolling-bar__scroll-button"></button>
+                <button class="scrolling-bar__scroll-button"></button>
+                <button class="scrolling-bar__scroll-button"></button>
+            </div>
+            -->
+        </section>
+        <section class="pricing-section">
+            <a name="sign-up"></a>
+            <div class="pricing-section__heading">
+                <h4 class="pricing-section__title">CHOOSE A SUBSCRIPTION</h4>
+                <p class="pricing-section__subtitle">
+                    A interface built by deigners, for designers. What a clice tag line lol.
+                </p>
+            </div>
+            <div class="account-cards-wrap">
+                <div class="account-block">
+                    <div class="account-card">
+                        <div class="account-card__heading">
+                            <h5>FREE ACCOUNT</h5>
+                        </div>
+                        <div class="account-card__main">
+                            <p class="account-card__decription">
+                                Great for giving it a try or the one off web designer
+                            </p>
+                            <p class="account-card__price">Free</p>
+                            <div class="account-card__list">
+                                <hr>
+                                <p>Save up to 2 layouts</p> 
+                                <hr>
+                                <p>Export 1 HTML template</p> 
+                                <hr>
+                                <p>15 Layout Options</p> 
+                                <hr>
+                                <p>Tweet to get more layouts</p> 
+                            </div>
+                            <a class="account-card__button" href="#">
+                                SIGN UP
+                                <span class="check-icon"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="account-card__users">
+                        Join
+                        <span class="account-card__users-count">34,293</span>
                         users
-                   </p>
-               </div>
-               <div class="account-card">
-                   <h5 class="account-card__heading">YEARLY SUBSCRIPTION</h5>
-                   <p class="account-card__decription">
-                       Great for giving it a try or the one off web designer
                     </p>
-                   <p class="account-card__price">
-                       89$
-                       <span class="account-card__period">/ Yearly</span>
-                   </p>
-                   <div class="account-card__list">
-                       <hr>
-                       Save unlimted layouts
-                       <hr>
-                       Export unlimted HTML templates
-                       <hr>
-                       Over 30 Layout Options & counting
-                       <hr>
-                       New Layouts added monthly
-                       <hr>
-                       Learning Documentation
-                       <hr>
-                       Somthing else
-                   </div>
-                   <a class="account-card__button" href="#">SIGN UP</a>
-                   <p class="account-card__users">
-                       Join 
-                       <span class="account-card__users-count">1828</span> 
+                </div>
+                <div class="account-block">
+                    <div class="account-card paid-card">
+                        <div class="account-card__heading">
+                            <h5>YEARLY SUBSCRIPTION</h5>
+                        </div>
+                        <div class="account-card__main">
+                            <p class="account-card__decription">
+                                Great for giving it a try or the one off web designer
+                            </p>
+                            <p class="account-card__price">
+                                $89
+                                <span class="account-card__period">/ Yearly</span>
+                            </p>
+                            <div class="account-card__list">
+                                <hr>
+                                <p>Save unlimted layouts</p>
+                                <hr>
+                                <p>Export unlimted HTML templates</p>
+                                <hr>
+                                <p>Over 30 Layout Options & counting</p>
+                                <hr>
+                                <p>New Layouts added monthly</p>
+                                <hr>
+                                <p>Learning Documentation</p>
+                                <hr>
+                                <p>Somthing else</p>
+                            </div>
+                            <a class="account-card__button" href="#">
+                                SIGN UP
+                                <span class="check-icon"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="account-card__users">
+                        Join
+                        <span class="account-card__users-count">1,828</span>
                         users
-                   </p>
-               </div>
-            </section>
-        </main>
-       <footer class="footer">
-           <div class="footer-menu">
-               <p class="footer-menu__title">BUILDER.IO</p>
-               <ul>
-                   <li class="footer-menu__item">Login</li>
-                   <li class="footer-menu__item">Sign Up</li>
-                   <li class="footer-menu__item">Support</li>
-                   <li class="footer-menu__item">Contact us</li>
-               </ul>
-           </div>
-           <div class="footer-menu">
-               <p class="footer-menu__title">COMPANY</p>
-               <ul>
-                   <li class="footer-menu__item">About us</li>
-                   <li class="footer-menu__item">Blog</li>
-                   <li class="footer-menu__item">Contact</li>
-               </ul>
-           </div>
-           <div class="footer-menu">
-               <p class="footer-menu__title">LEARNING</p>
-               <ul>
-                   <li class="footer-menu__item">
-                       <a href="#">Support Articles</a>
-                    </li>
-                   <li class="footer-menu__item">
-                       <a href="#">Support Documentation</a>
-                    </li>
-                   <li class="footer-menu__item">
-                       <a href="#">Forum</a>
-                    </li>
-                   <li class="footer-menu__item">
-                       <a href="#">How to Videos</a>
-                    </li>
-               </ul>
-           </div>
-       </footer>
-   </body>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-menu">
+            <p class="footer-menu__title">BUILDER.IO</p>
+            <ul>
+                <li class="footer-menu__item">
+                    <a href="#">Login</a>
+                </li>
+                <li class="footer-menu__item">
+                    <a href="#">Sign Up</a>
+                </li>
+                <li class="footer-menu__item">
+                    <a href="#">Support</a>
+                </li>
+                <li class="footer-menu__item">
+                    <a href="#">Contact us</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-menu">
+            <p class="footer-menu__title">COMPANY</p>
+            <ul>
+                <li class="footer-menu__item">
+                    <a href="#">About us</a>
+                </li>
+                <li class="footer-menu__item">
+                    <a href="#">Blog</a>
+                </li>
+                <li class="footer-menu__item">
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-menu">
+            <p class="footer-menu__title">LEARNING</p>
+            <ul>
+                <li class="footer-menu__item">
+                    <a href="#">Support Articles</a>
+                </li>
+                <li class="footer-menu__item">
+                    <a href="#">Support Documentation</a>
+                </li>
+                <li class="footer-menu__item">
+                    <a href="#">Forum</a>
+                </li>
+                <li class="footer-menu__item">
+                    <a href="#">How to Videos</a>
+                </li>
+            </ul>
+        </div>
+        <img class="footer-image" src="./assets/img/footer_img.png" alt="">
+    </footer>
+</body>
 </html>
