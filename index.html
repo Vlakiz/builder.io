@@ -5,39 +5,38 @@
     <meta charset="utf-8" />
     <title>Builder.io</title>
     <link rel="stylesheet" href="./assets/css/normalize.css">
-    <link rel="stylesheet" href="./assets/css/common.css">
-    <link rel="stylesheet" href="./assets/css/header.css">
-    <link rel="stylesheet" href="./assets/css/introduction.css">
-    <link rel="stylesheet" href="./assets/css/description.css">
-    <link rel="stylesheet" href="./assets/css/video.css">
-    <link rel="stylesheet" href="./assets/css/features.css">
-    <link rel="stylesheet" href="./assets/css/pricing.css">
-    <link rel="stylesheet" href="./assets/css/footer.css">
-    <link href="https://fonts.googleapis.com/css?family=Sintony:Regular&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:Bold&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:Regular&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:Medium&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:Semi-Bold&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 
 <body>
     <header class="header">
-        <ul class="header-menu">
-            <li class="header-menu__item">
-                <a href="#sign-up">Sign Up</a>
-            </li>
-            <li class="header-menu__item">
-                <a href="#">Log In</a>
-            </li>
-            <li class="header-menu__item">
-                <a href="#">Support</a>
-            </li>
-        </ul>
+        <div class="header-menu">
+            <!--
+            <input class="header-menu__toggle" type="checkbox" />
+            <label class="header-menu__btn" for="header-menu__toggle">
+                <span></span>
+            </label>
+        -->
+        
+            <ul class="header-menu__box">
+                <li class="header-menu__item">
+                    <a href="#sign-up">Sign Up</a>
+                </li>
+                <li class="header-menu__item">
+                    <a href="#">Log In</a>
+                </li>
+                <li class="header-menu__item">
+                    <a href="#">Support</a>
+                </li>
+            </ul>
+        </div>
     </header>
     <main>
         <section class="introduction">
             <div class="introduction__info">
-                <h1 class="introduction__title">Builder.io</h1>
+                <h1 class="introduction__title">
+                    <a href="http://127.0.0.1:5500">Builder.io</a>
+                </h1>
                 <h3 class="introduction__subtitle">
                     Builder.io lets you generate unique HTML website templates talloried for desigers.
                 </h3>
@@ -46,7 +45,7 @@
                 </form>
             </div>
             <div class="image-block">
-                <img src="./assets/img/forest.png" alt="" class="">
+                <img class="introduction__main_image" src="./assets/img/forest.png" alt="" class="">
                 <button class="image-block__edit-button">
                     <img src="./assets/img/icon-document-edit.png" alt="">
                 </button>
@@ -61,24 +60,29 @@
             </div>
         </section>
         <section class="description-section">
-            <div class="description-section__info">
-                <div class="text-block">
-                    <h4 class="text-block__title">Work with your hands</h4>
-                    <p class="text-block__subtitle">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-                    </p>
+            <div class="description-section__content">
+                <div class="description-section__info">
+                    <div class="text-block">
+                        <h4 class="text-block__title">Work with your hands</h4>
+                        <p class="text-block__subtitle">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                        </p>
+                    </div>
+                    <div class="text-block">
+                        <h4 class="text-block__title"> Optimised for the road</h4>
+                        <p class="text-block__subtitle">
+                            Builder not only works great on a desktop or laptop but has also been optimised
+                            to be just as easy to use on a table or mobile device.
+                        </p>
+                    </div>
                 </div>
-                <div class="text-block">
-                    <h4 class="text-block__title"> Optimised for the road</h4>
-                    <p class="text-block__subtitle">
-                        Builder not only works great on a desktop or laptop but has also been optimised
-                        to be just as easy to use on a table or mobile device.
-                    </p>
-                </div>
+                <form action="#sign-up">
+                    <button class="decription-section__create-acc-button">CREATE ACCOUNT</button>
+                </form>
+                <img src="./assets/img/Phone.png" alt="" class="description-section__image">
             </div>
-            <button class="decription-section__create-acc-button">CREATE ACCOUNT</button>
-            <img src="./assets/img/Phone.png" alt="" class="description-section__image">
+        </div>
         </section>
         <section class="video-section">
             <div class="banner-block">
@@ -91,8 +95,12 @@
                     </p>
                 </div>
                 <div class="banner-block__buttons">
-                    <a class="banner-block__buy-button" href="#">TAKE MY MONEY!</a>
-                    <a class="banner-block__demo-button" href="#">FREE ACCOUNT</a>
+                    <div class="button-wrap">
+                        <a class="banner-block__buy-button" href="#">TAKE MY MONEY!</a>
+                    </div>
+                    <div class="button-wrap">
+                        <a class="banner-block__demo-button" href="#">FREE ACCOUNT</a>
+                    </div>
                 </div>
             </div>
             <div class="video-block">
@@ -166,17 +174,18 @@
                                 <hr>
                                 <p>Tweet to get more layouts</p> 
                             </div>
-                            <a class="account-card__button" href="#">
-                                SIGN UP
-                                <span class="check-icon"></span>
-                            </a>
+                            <div class="button-wrap">
+                                <a class="account-card__button" href="#">
+                                    SIGN UP
+                                    <span class="check-icon"></span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <p class="account-card__users">
                         Join
                         <span class="account-card__users-count">34,293</span>
-                        users
-                    </p>
+                        users</p>
                 </div>
                 <div class="account-block">
                     <div class="account-card paid-card">
@@ -205,17 +214,18 @@
                                 <hr>
                                 <p>Somthing else</p>
                             </div>
-                            <a class="account-card__button" href="#">
-                                SIGN UP
-                                <span class="check-icon"></span>
-                            </a>
+                            <div class="button-wrap">
+                                <a class="account-card__button" href="#">
+                                    SIGN UP
+                                    <span class="check-icon"></span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <p class="account-card__users">
                         Join
                         <span class="account-card__users-count">1,828</span>
-                        users
-                    </p>
+                        users</p>
                 </div>
             </div>
         </section>

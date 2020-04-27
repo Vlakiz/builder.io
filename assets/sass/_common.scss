@@ -1,0 +1,81 @@
+@import 'fonts';
+
+html {
+    scroll-behavior: smooth;
+}
+
+body:after {
+    content: 
+        url(./../img/button-bg.png) 
+        url(./../img/banner-button-bg.png) 
+        url(./../img/banner-button-bg2.png)
+        url(./../img/button_intr_hover.png)
+        url(./../img/button-descr-hover.png)
+    ;
+    position: absolute; 
+    width: 0; 
+    height: 0; 
+    overflow: hidden; 
+    z-index: -1; 
+}
+
+ul li {
+    list-style-type: none
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    border-radius: 3px; 
+    font-family: $font_button;
+    color: white;
+    cursor: pointer;
+}
+
+hr {
+    border: 1px solid #e7eaf1;
+    margin: 0;
+}
+
+@mixin common($width) {
+    button {
+        width: 0.144832 * $width;
+        height: 0.0395 * $width;
+        font-size: 0.010533 * $width;
+    }
+
+    .button-wrap {
+        font-size: 0.010533 * $width;
+    }
+}
+
+@media (min-width: 1920px) {
+    @include common(2560px);
+}
+
+@media (max-width: 1920px) {
+    @include common(1920px);
+}
+
+@media (max-width: 1680px) {
+    @include common(1680px);
+}
+
+@media (max-width: 1536px) {
+    @include common(1536px);
+}
+
+@media (max-width: 1367px) {
+    @include common(1366px);
+}
+
+@media (max-width: 1280px) {
+    @include common(1280px);
+}
+
+@media (max-width: 1024px) {
+    @include common(1024px);
+}
