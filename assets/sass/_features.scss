@@ -74,32 +74,90 @@
     }
 }
 
+@mixin featuresPhone() {
+
+    .features-section {
+        height: auto;
+    }
+    
+    .features-cards-wrap {
+        padding-top: 20vw;
+        margin-bottom: 20vw;
+        font-size: 3vw;
+    }
+    
+    .card-block {
+        width: 73vw;
+        padding-bottom: 2vw;
+    }
+
+    .card-block__image {
+        max-width: 100%;
+        padding-bottom: 10vw;
+        height: 8vw;
+    }
+
+    
+    .card-block__title {
+        font-size: 6vw;
+        padding-bottom: 4vw;
+    }
+    
+    .card-block__description {
+        padding-bottom: 4vw;
+    }
+}
+
+@mixin featuresScrollable {
+    .features-cards-wrap {
+        width: 73vw;
+        display: flex; 
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+    
+    .card-block {
+        flex: 0 0 auto;
+    }
+
+    .card-block + .card-block {
+        margin-left: 10vw;
+    }
+}
+
 @media (min-width: 1920px) {
     @include features(2560px);
 }
 
-@media (max-width: 1920px) {
+@media (min-width: 1680px) and (max-width: 1920px) {
     @include features(1920px);
 }
 
-@media (max-width: 1680px) {
+@media (min-width: 1536px) and (max-width: 1680px) {
     @include features(1680px);
 }
 
-@media (max-width: 1536px) {
+@media (min-width: 1367px) and (max-width: 1536px) {
     @include features(1536px);
 }
 
-@media (max-width: 1367px) {
+@media (min-width: 1280px) and (max-width: 1367px) {
     @include features(1366px);
 }
 
-@media (max-width: 1280px) {
+@media (min-width: 1024px) and (max-width: 1280px) {
     @include features(1280px);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (orientation: landscape) {
     @include features(1024px);
+    @include featuresScrollable();
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+    @include featuresScrollable();
+    @include featuresPhone();
 }
 
 

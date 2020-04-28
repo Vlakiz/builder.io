@@ -21,10 +21,6 @@
     text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
 }
 
-.text-block:last-child {
-    padding-left: 7%;
-}
-
 .text-block__title {
     font-weight: 100;
     font-family: $font_main;
@@ -47,7 +43,8 @@
 }
 
 .decription-section__create-acc-button:hover {
-    background: url(./../img/button-descr-hover.png)
+    background: url(./../img/button-descr-hover.png);
+    background-size: 100%;
 }
 
 .decription-section__create-acc-button:active {
@@ -57,7 +54,6 @@
 .description-section__image {
     position: absolute;
     left: 27%;
-    top: 250px;
     z-index: -10;
     left: 28.875%;
 }
@@ -82,7 +78,11 @@
         width: 0.34375 * $width;
         margin-bottom: 0.045858 * $height;
     }
-    
+
+    .text-block:last-child {
+        padding-left: 7%;
+    }
+     
     .text-block__title {
         font-size: 0.021 * $width;
     }
@@ -99,30 +99,72 @@
     }  
 }
 
+@mixin descriptionPhone() {
+
+    .description-section {
+        background-size: 260vw;
+        height: 110vw;
+    }
+
+    .description-section__content {
+        width: 90vw;
+    }
+    
+    .description-section__info {
+        padding-top: 15vw;
+        margin-bottom: 5vw;
+        flex-direction: column;
+    }
+    
+    .text-block {
+        margin-bottom: 4vw;
+        padding-left: 3vw;
+    }
+    
+    .text-block__title {
+        font-size: 7vw;
+    }
+    
+    .text-block__subtitle {
+        font-size: 3vw;
+        margin-top: 1vw;
+    }
+    
+    .description-section__image {
+        top: 60%;
+        left: 40%;
+        width: 100vw;
+    }  
+}
+
 @media (min-width: 1920px) {
     @include description(2560px);
 }
 
-@media (max-width: 1920px) {
+@media (min-width: 1680px) and (max-width: 1920px) {
     @include description(1920px);
 }
 
-@media (max-width: 1680px) {
+@media (min-width: 1536px) and (max-width: 1680px) {
     @include description(1680px);
 }
 
-@media (max-width: 1536px) {
+@media (min-width: 1367px) and (max-width: 1536px) {
     @include description(1536px);
 }
 
-@media (max-width: 1367px) {
+@media (min-width: 1280px) and (max-width: 1367px) {
     @include description(1366px);
 }
 
-@media (max-width: 1280px) {
+@media (min-width: 1024px) and (max-width: 1280px) {
     @include description(1280px);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (orientation: landscape) {
     @include description(1024px);
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+    @include descriptionPhone();
 }

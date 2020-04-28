@@ -32,6 +32,7 @@
 
 .introduction__sign-up-button:hover {
     background: url(./../img/button_intr_hover.png);
+    background-size: 100%;
 }
 
 .introduction__sign-up-button:active {
@@ -183,30 +184,97 @@
     }
 }
 
+@mixin introductionPhone() {
+
+    .introduction {
+        height: auto;
+        background-size: 500vw;
+    }
+
+    .introduction__info {
+        padding-bottom: 20vw;
+        padding-top: 30vw;
+    }
+
+    .introduction__title {
+        font-size: 17vw;
+    }
+
+    .introduction__subtitle {
+        font-size: 5vw;
+        line-height: 7vw;
+        margin: 5vw 7vw 7vw;
+    }
+
+    .image-block {
+        width: 100%;
+    }
+
+    .image-block__description {
+        font-size: 3vw;
+    }
+
+    .image-block__date {
+        font-size: 2vw;
+        padding-top: 2vw;
+    }
+
+    .image-block__edit-button {
+        width: 10vw;
+        height: 10vw;
+        left: 85vw;
+    
+        img {
+            margin-left: 0.0026333 * 1000px;
+            width: 3vw;
+        }
+    }
+
+    .image-block__likes {
+        width: 10vw;
+        height: 3vw;
+    
+        .image-block__likes-count {
+            font-size: 3vw;
+        }
+    }
+    
+    .image-block__likes-button {
+        top: 1vw;
+        left: -2vw;
+        width: 4vw;
+        height: 4vw;
+    }
+}
+
 @media (min-width: 1920px) {
     @include introduction(2560px);
 }
 
-@media (max-width: 1920px) {
+@media (min-width: 1680px) and (max-width: 1920px) {
     @include introduction(1920px);
 }
 
-@media (max-width: 1680px) {
+@media (min-width: 1536px) and (max-width: 1680px) {
     @include introduction(1680px);
 }
 
-@media (max-width: 1536px) {
+@media (min-width: 1367px) and (max-width: 1536px) {
     @include introduction(1536px);
 }
 
-@media (max-width: 1367px) {
+@media (min-width: 1280px) and (max-width: 1367px) {
     @include introduction(1366px);
 }
 
-@media (max-width: 1280px) {
+@media (min-width: 1024px) and (max-width: 1280px) {
     @include introduction(1280px);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (orientation: landscape) {
     @include introduction(1024px);
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+    @include introductionPhone();
 }

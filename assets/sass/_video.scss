@@ -141,30 +141,86 @@
     }
 }
 
+@mixin videoPhone() {
+
+    .banner-block {
+        background-size: 115vw;
+
+        a {
+            margin: auto;
+            width: 60vw;
+            height: 14vw;
+            line-height: 14vw;
+        }
+    }
+    
+    .banner-block__headline {
+        width: 90%;
+        padding-top: 10vw;
+        padding-bottom: 7vw;
+    }
+    
+    .banner-block__title {
+        font-size: 7vw;
+        margin-bottom: 2vw;
+    }
+    
+    .banner-block__description { 
+        font-size: 3vw;
+    }
+
+    .banner-block__buttons {
+        padding-bottom: 10vw;
+        width: 90vw;
+        flex-direction: column;
+
+        .banner-block__demo-button {
+            margin-top: 3vw;
+            width: 50vw;
+            height: 14vw;
+        }
+    }
+
+    .video-block {
+        height: 50.625vw;
+        background-size: 100vw;
+    }
+    
+    .video-block__play-button {
+        width: 15vw;
+        height: 15vw;
+        top: 18.4vw;
+    }  
+}
+
 @media (min-width: 1920px) {
     @include video(2560px);
 }
 
-@media (max-width: 1920px) {
+@media (min-width: 1680px) and (max-width: 1920px) {
     @include video(1920px);
 }
 
-@media (max-width: 1680px) {
+@media (min-width: 1536px) and (max-width: 1680px) {
     @include video(1680px);
 }
 
-@media (max-width: 1536px) {
+@media (min-width: 1367px) and (max-width: 1536px) {
     @include video(1536px);
 }
 
-@media (max-width: 1367px) {
+@media (min-width: 1280px) and (max-width: 1367px) {
     @include video(1366px);
 }
 
-@media (max-width: 1280px) {
+@media (min-width: 1024px) and (max-width: 1280px) {
     @include video(1280px);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (orientation: landscape) {
     @include video(1024px);
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+    @include videoPhone();
 }

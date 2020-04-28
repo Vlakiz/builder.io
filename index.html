@@ -11,13 +11,11 @@
 <body>
     <header class="header">
         <div class="header-menu">
-            <!--
-            <input class="header-menu__toggle" type="checkbox" />
-            <label class="header-menu__btn" for="header-menu__toggle">
-                <span></span>
-            </label>
-        -->
-        
+            <div class="hamburger">
+                <div class="hamburger__item"></div>
+                <div class="hamburger__item"></div>
+                <div class="hamburger__item"></div>
+            </div>
             <ul class="header-menu__box">
                 <li class="header-menu__item">
                     <a href="#sign-up">Sign Up</a>
@@ -29,6 +27,7 @@
                     <a href="#">Support</a>
                 </li>
             </ul>
+            <div class="hamburger-box"></div>
         </div>
     </header>
     <main>
@@ -281,5 +280,7 @@
         </div>
         <img class="footer-image" src="./assets/img/footer_img.png" alt="">
     </footer>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script src="./js/main.js" type="module"></script>
 </body>
 </html>

@@ -224,30 +224,61 @@
 
 }
 
+@mixin pricingPhone() {
+    $width: 282vw;
+    
+    .pricing-section {
+        height: auto;
+    }
+    
+    .account-cards-wrap {
+        width: 90vw;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .account-block {
+        display: inline-block;
+    }
+    
+    .account-block:first-child {
+        margin-bottom: 8vw;
+    }
+    
+    .account-card {
+        margin: auto;
+    }
+}
+
 @media (min-width: 1920px) {
     @include pricing(2560px);
 }
 
-@media (max-width: 1920px) {
+@media (min-width: 1680px) and (max-width: 1920px) {
     @include pricing(1920px);
 }
 
-@media (max-width: 1680px) {
+@media (min-width: 1536px) and (max-width: 1680px) {
     @include pricing(1680px);
 }
 
-@media (max-width: 1536px) {
+@media (min-width: 1367px) and (max-width: 1536px) {
     @include pricing(1536px);
 }
 
-@media (max-width: 1367px) {
+@media (min-width: 1280px) and (max-width: 1367px) {
     @include pricing(1366px);
 }
 
-@media (max-width: 1280px) {
+@media (min-width: 1024px) and (max-width: 1280px) {
     @include pricing(1280px);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (orientation: landscape) {
     @include pricing(1024px);
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+    @include pricing(282vw);
+    @include pricingPhone();
 }
