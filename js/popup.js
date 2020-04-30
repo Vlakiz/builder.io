@@ -16,7 +16,7 @@ export default class Popup {
 
         this.blackout.fadeIn(300);
         this.popup.fadeIn(300);
-        bodyScrollLock.disableBodyScroll(this.popup.get(0));
+        $('body').css('overflow', 'hidden');
     }
 
     disappear(e) {
@@ -24,7 +24,7 @@ export default class Popup {
 
         this.popup.fadeOut(300);
         this.blackout.fadeOut(300);
-        bodyScrollLock.enableBodyScroll(this.popup.get(0));
+        $('body').css('overflow', 'auto');
     }
 
     render() {
