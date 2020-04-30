@@ -150,12 +150,12 @@
     @include features(1280px);
 }
 
-@media (max-width: 1024px) and (orientation: landscape) {
+@media (max-width: 1024px) and (min-aspect-ratio: 13/9) {
     @include features(1024px);
     @include featuresScrollable();
 }
 
-@media (max-width: 1024px) and (orientation: portrait) {
+@media (max-width: 1024px) and (max-aspect-ratio: 13/9) {
     @include featuresScrollable();
     @include featuresPhone();
 }

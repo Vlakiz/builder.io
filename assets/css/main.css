@@ -460,7 +460,7 @@ hr {
   }
 }
 
-@media (max-width: 1024px) and (orientation: landscape) {
+@media (max-width: 1024px) and (min-aspect-ratio: 13 / 9) {
   button {
     width: 148.30797px;
     height: 40.448px;
@@ -510,7 +510,7 @@ hr {
   }
 }
 
-@media (max-width: 1024px) and (orientation: portrait) {
+@media (max-width: 1024px) and (max-aspect-ratio: 13 / 9) {
   button {
     width: 50vw;
     height: 14vw;
@@ -820,7 +820,7 @@ hr {
   }
 }
 
-@media (max-width: 1024px) and (orientation: landscape) {
+@media (max-width: 1024px) and (min-aspect-ratio: 13 / 9) {
   .description-section {
     background-size: 1024px;
     height: 432.64px;
@@ -852,7 +852,7 @@ hr {
   }
 }
 
-@media (max-width: 1024px) and (orientation: portrait) {
+@media (max-width: 1024px) and (max-aspect-ratio: 13 / 9) {
   .description-section {
     background-size: 260vw;
     height: 110vw;
@@ -1094,7 +1094,7 @@ hr {
   }
 }
 
-@media (max-width: 1024px) and (orientation: landscape) {
+@media (max-width: 1024px) and (min-aspect-ratio: 13 / 9) {
   .features-section {
     height: 395.52px;
   }
@@ -1139,7 +1139,7 @@ hr {
   }
 }
 
-@media (max-width: 1024px) and (orientation: portrait) {
+@media (max-width: 1024px) and (max-aspect-ratio: 13 / 9) {
   .features-cards-wrap {
     width: 73vw;
     display: -webkit-box;
@@ -1434,7 +1434,7 @@ hr {
   }
 }
 
-@media (max-width: 1024px) and (orientation: landscape) {
+@media (max-width: 1024px) and (mix-aspect-ratio: 13 / 9) {
   .footer {
     width: 437.76px;
     height: 181.12px;
@@ -1459,7 +1459,7 @@ hr {
   }
 }
 
-@media (max-width: 1024px) and (orientation: portrait) {
+@media (max-width: 1024px) and (max-aspect-ratio: 13 / 9) {
   .footer {
     width: 106.875vw;
     height: 44.21875vw;
@@ -1685,7 +1685,7 @@ hr {
   }
 }
 
-@media (max-width: 1024px) and (orientation: landscape) {
+@media (max-width: 1024px) and (min-aspect-ratio: 13 / 9) {
   .header {
     width: 593.92px;
     position: absolute;
@@ -1717,7 +1717,7 @@ hr {
   }
 }
 
-@media (max-width: 1024px) and (orientation: portrait) {
+@media (max-width: 1024px) and (max-aspect-ratio: 13 / 9) {
   .header {
     position: fixed;
     z-index: 999999;
@@ -2212,7 +2212,7 @@ hr {
   }
 }
 
-@media (max-width: 1024px) and (orientation: landscape) {
+@media (max-width: 1024px) and (min-aspect-ratio: 13 / 9) {
   .introduction {
     height: 593.92px;
     background-size: 1024px;
@@ -2257,7 +2257,7 @@ hr {
   }
 }
 
-@media (max-width: 1024px) and (orientation: portrait) {
+@media (max-width: 1024px) and (max-aspect-ratio: 13 / 9) {
   .introduction {
     height: auto;
     background-size: 500vw;
@@ -2910,7 +2910,7 @@ hr {
   }
 }
 
-@media (max-width: 1024px) and (orientation: landscape) {
+@media (max-width: 1024px) and (min-aspect-ratio: 13 / 9) {
   .pricing-section {
     height: 663.68px;
   }
@@ -2986,7 +2986,7 @@ hr {
   }
 }
 
-@media (max-width: 1024px) and (orientation: portrait) {
+@media (max-width: 1024px) and (max-aspect-ratio: 13 / 9) {
   .pricing-section {
     height: 182.77125vw;
   }
@@ -3435,7 +3435,7 @@ hr {
   }
 }
 
-@media (max-width: 1024px) and (orientation: landscape) {
+@media (max-width: 1024px) and (min-aspect-ratio: 13 / 9) {
   .banner-block {
     height: 236.8px;
   }
@@ -3475,7 +3475,7 @@ hr {
   }
 }
 
-@media (max-width: 1024px) and (orientation: portrait) {
+@media (max-width: 1024px) and (max-aspect-ratio: 13 / 9) {
   .banner-block {
     background-size: 115vw;
   }

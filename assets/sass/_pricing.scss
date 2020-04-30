@@ -280,11 +280,11 @@
     @include pricing(1280px);
 }
 
-@media (max-width: 1024px) and (orientation: landscape) {
+@media (max-width: 1024px) and (min-aspect-ratio: 13/9) {
     @include pricing(1024px);
 }
 
-@media (max-width: 1024px) and (orientation: portrait) {
+@media (max-width: 1024px) and (max-aspect-ratio: 13/9) {
     @include pricing(282vw);
     @include pricingPhone();
 }
