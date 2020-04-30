@@ -51,10 +51,10 @@
     
         a {
             font-size: 0.00875 * $width;
-        }
-    
-        a:hover {
-            border-bottom: (0.00125 * $width) solid #b7bfc5;
+
+            &:hover {
+                border-bottom: (0.00125 * $width) solid #b7bfc5;
+            }
         }
     }
     

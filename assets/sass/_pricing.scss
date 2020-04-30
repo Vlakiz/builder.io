@@ -66,12 +66,12 @@
     .account-card__button {
         background: #947cc3;
         color: white;
-    }
 
-    .account-card__button:hover {
-        background: url(./../img/button-bg.png);
+        &:hover {
+            background: url(./../img/button-bg.png);
+            background-size: 100%;
+        }
     }
-
 }
 
 .account-card__decription {
@@ -110,10 +110,12 @@
     border-radius: 3px;
     margin: auto;
     color: #967dc4;
-}
+    background: white;
 
-.account-card__button:hover {
-    background: url(./../img/button-bg.png);
+    &:hover {
+        background: url(./../img/button-bg.png);
+        background-size: 100%;
+    }
 }
 
 .check-icon {
@@ -247,6 +249,10 @@
     
     .account-card {
         margin: auto;
+    }
+
+    .account-block {
+        margin-bottom: 10vw;
     }
 }
 

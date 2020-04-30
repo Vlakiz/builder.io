@@ -1,10 +1,7 @@
-.header ul {
-
-    li a {
+.header ul li a {
         font-family: $font_extra;
         font-weight: 700;
         color: white;
-    }
 }
 
 @mixin header($width) {
@@ -25,13 +22,14 @@
             li {
                 padding-bottom: 0.008125 * $width;
                 margin-left: 0.0175 * $width;
+
                 a {
                     font-size: 0.00875 * $width; 
                 }
-            } 
 
-            li:hover {
-                border-bottom: (0.00125 * $width) solid white;
+                &:hover {
+                    border-bottom: (0.00125 * $width) solid white;
+                }
             }
         }
     }
@@ -73,6 +71,7 @@
             position: relative;
             top: 3vw;
             left: 3vw;
+
             &.active {
                 .hamburger__item {
                     &:nth-child(2) {
@@ -89,6 +88,7 @@
                     }
                 }
             }
+
             &__item:nth-child(1),
             &__item:nth-child(2),
             &__item:nth-child(3) {
@@ -109,6 +109,7 @@
             left: -60vw;
             z-index: -99999999999999;
             transition-duration: 500ms;
+
             &.active {
                 transform: translateX(60vw);
             }
@@ -147,60 +148,3 @@
 @media (max-width: 1024px) and (orientation: portrait) {
     @include hamburger();
 }
-
-/*
-
-@mixin header-phone() {
-    .header-menu__btn {
-        display: flex; 
-        align-items: center;  
-        position: fixed;
-        top: 20px;
-        left: 20px;  width: 26px;
-        height: 26px;  cursor: pointer;
-        z-index: 1;
-    }
-
-    .header-menu__btn > span,
-    .header-menu__btn > span::before,
-    .header-menu__btn > span::after {
-        display: block;
-        position: absolute;  width: 100%;
-        height: 2px;  background-color: #616161;
-    }
-      
-    .header-menu__btn > span::before {
-        content: '';
-        top: -8px;
-    }
-    
-    .header-menu__btn > span::after {
-        content: '';
-        top: 8px;
-    }
-
-    .menu__box {
-        display: block;
-        position: fixed;
-        visibility: hidden;
-        top: 0;
-        left: -100%;  width: 300px;
-        height: 100%;  margin: 0;
-        padding: 80px 0;  list-style: none;
-        text-align: center;  background-color: #ECEFF1;
-        box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
-    }
-    
-    .menu__item {
-        display: block;
-        padding: 12px 24px;  color: #333;  font-family: 'Roboto', sans-serif;
-        font-size: 20px;
-        font-weight: 600;  text-decoration: none;
-    }
-
-    .menu__item:hover {
-        background-color: #CFD8DC;
-    }
-}
-
-*/

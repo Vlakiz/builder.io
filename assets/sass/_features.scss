@@ -35,10 +35,10 @@
 .card-block__button {
     font-weight: 600;
     color: #977ec5;
-}
 
-.card-block__button:hover {
-    border-bottom: solid 2px #977ec5;
+    &:hover {
+        border-bottom: solid 2px #977ec5;
+    }
 }
 
 @mixin features($width) {

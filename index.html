@@ -95,10 +95,10 @@
                 </div>
                 <div class="banner-block__buttons">
                     <div class="button-wrap">
-                        <a class="banner-block__buy-button" href="#">TAKE MY MONEY!</a>
+                        <a class="banner-block__buy-button" href="#paid-acc">TAKE MY MONEY!</a>
                     </div>
                     <div class="button-wrap">
-                        <a class="banner-block__demo-button" href="#">FREE ACCOUNT</a>
+                        <a class="banner-block__demo-button" href="#free-acc">FREE ACCOUNT</a>
                     </div>
                 </div>
             </div>
@@ -136,13 +136,6 @@
                     <a class="card-block__button" href="#">View Support Documents</a>
                 </div>
             </div>
-            <!--
-            <div class="scrolling-bar">
-                <button class="scrolling-bar__scroll-button"></button>
-                <button class="scrolling-bar__scroll-button"></button>
-                <button class="scrolling-bar__scroll-button"></button>
-            </div>
-            -->
         </section>
         <section class="pricing-section">
             <a name="sign-up"></a>
@@ -153,6 +146,7 @@
                 </p>
             </div>
             <div class="account-cards-wrap">
+                <a name="free-acc"></a>
                 <div class="account-block">
                     <div class="account-card">
                         <div class="account-card__heading">
@@ -174,10 +168,10 @@
                                 <p>Tweet to get more layouts</p> 
                             </div>
                             <div class="button-wrap">
-                                <a class="account-card__button" href="#">
+                                <button class="account-card__button">
                                     SIGN UP
                                     <span class="check-icon"></span>
-                                </a>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -186,6 +180,7 @@
                         <span class="account-card__users-count">34,293</span>
                         users</p>
                 </div>
+                <a name="paid-acc"></a>
                 <div class="account-block">
                     <div class="account-card paid-card">
                         <div class="account-card__heading">
@@ -214,10 +209,10 @@
                                 <p>Somthing else</p>
                             </div>
                             <div class="button-wrap">
-                                <a class="account-card__button" href="#">
+                                <button class="account-card__button" href="#">
                                     SIGN UP
                                     <span class="check-icon"></span>
-                                </a>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -228,6 +223,11 @@
                 </div>
             </div>
         </section>
+        <div class="popup-window">
+            <button class="close-button"></button>
+            <div class="popup-window__content"></div>
+        </div>
+        <div class="popup-blackout"></div>
     </main>
     <footer class="footer">
         <div class="footer-menu">
@@ -281,6 +281,7 @@
         <img class="footer-image" src="./assets/img/footer_img.png" alt="">
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script src="./node_modules/body-scroll-lock/lib/bodyScrollLock.min.js"></script>
     <script src="./js/main.js" type="module"></script>
 </body>
 </html>
