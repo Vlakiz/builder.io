@@ -1,0 +1,150 @@
+.header ul li a {
+        font-family: $font_extra;
+        font-weight: 700;
+        color: white;
+}
+
+@mixin header($width) {
+    .header {
+        width: 0.58 * $width;
+        position: absolute;
+        z-index: 999999;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, 0);
+
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 0.03125 * $width;
+            padding-left: 0;
+
+            li {
+                padding-bottom: 0.008125 * $width;
+                margin-left: 0.0175 * $width;
+
+                a {
+                    font-size: 0.00875 * $width; 
+                }
+
+                &:hover {
+                    border-bottom: (0.00125 * $width) solid white;
+                }
+            }
+        }
+    }
+}
+
+@mixin hamburger() {
+    .header {
+        position: fixed;
+        z-index: 999999;
+        width: 100%;
+        font-size: 8vw;
+        
+        ul {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            padding-left: 10%;
+            padding-top: 10%;
+            left: -60vw;
+            transition-duration: 500ms;
+            
+            li {
+                padding-top: 4vh;
+            }
+
+            &.active {
+                transform: translateX(60vw);
+            }
+        }
+
+        .hamburger {
+            width: 8vw;
+            height: 5vw;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            top: 3vw;
+            left: 3vw;
+
+            &.active {
+                .hamburger__item {
+                    &:nth-child(2) {
+                        transform: rotate(250deg);
+                        opacity: 0;
+                    }
+                    &:nth-child(1) {
+                        transform: rotate(405deg);
+                        top: 6px;
+                    }
+                    &:nth-child(3) {
+                        transform: rotate(-405deg);
+                        top: -6px;
+                    }
+                }
+            }
+
+            &__item:nth-child(1),
+            &__item:nth-child(2),
+            &__item:nth-child(3) {
+                width: 100%;
+                border-bottom: 0.5vw solid white;
+                transition: 500ms;
+                position: relative;
+                top: 0;
+            }
+        }
+
+        .hamburger-box {
+            width: 60vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.65);
+            position: absolute;
+            top: 0px;
+            left: -60vw;
+            z-index: -99999999999999;
+            transition-duration: 500ms;
+
+            &.active {
+                transform: translateX(60vw);
+            }
+        }
+    }
+}
+
+@media (min-width: 1920px) {
+    @include header(2560px);
+}
+
+@media (min-width: 1680px) and (max-width: 1920px) {
+    @include header(1920px);
+}
+
+@media (min-width: 1536px) and (max-width: 1680px) {
+    @include header(1680px);
+}
+
+@media (min-width: 1367px) and (max-width: 1536px) {
+    @include header(1536px);
+}
+
+@media (min-width: 1280px) and (max-width: 1367px) {
+    @include header(1366px);
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+    @include header(1280px);
+}
+
+@media (max-width: 1024px) and (min-aspect-ratio: 13/9) {
+    @include header(1024px);
+}
+
+@media (max-width: 1024px) and (max-aspect-ratio: 13/9) {
+    @include hamburger();
+}

@@ -1,0 +1,25 @@
+@import url(https://fonts.googleapis.com/css?family=Sintony:Regular&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:Bold&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:Regular&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:Medium&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:Semi-Bold&display=swap);
+
+
+@font-face {
+    font-family: Nexa;
+    src: url(./../font/nexabold.ttf)
+}
+
+@font-face {
+    font-family: NexaHeavy;
+    src: url(./../font/nexaheavy.ttf);
+}
+
+@font-face {
+    font-family: FontAwesome;
+    src: url(./../font/fontawesome.otf);
+}
+
+$font_main: 'Sintony', sans-serif;
+$font_extra: 'Montserrat', 'sans-serif';
+$font_button: 'Nexa', sans-serif;

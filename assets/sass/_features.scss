@@ -1,0 +1,227 @@
+.features-section {
+    background: #f6f6f4;
+    border-bottom: 1px solid #e7eaf1;
+}
+
+.features-cards-wrap {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 3vw;
+    margin: auto;
+    text-align: center;
+    font-family: $font_extra;
+}
+
+.card-block {
+    display: inline-block;
+    margin: auto;
+}
+
+.card-block__title {
+    font-family: $font_main;
+    font-weight: 400;
+    color: #a3adb5;
+    margin: 0;
+}
+
+.card-block__description {
+    font-weight: 500;
+    color: #abb4bb;
+    margin: 0;
+    line-height: 1.933;
+}
+
+.card-block__button {
+    font-weight: 600;
+    color: #977ec5;
+
+    &:hover {
+        border-bottom: solid 2px #977ec5;
+    }
+}
+
+@mixin features($width) {
+    .features-section {
+        height: 0.38625 * $width;
+    }
+    
+    .features-cards-wrap {
+        padding-top: 0.09125 * $width;
+        padding-bottom: 0.041875 * $width;
+        font-size: 0.0093625 * $width;
+        width: 0.7375 * $width;
+    }
+    
+    .card-block {
+        width: 0.225 * $width;
+    }
+
+    .card-block__image {
+        max-width: 100%;
+        padding-bottom: 0.0375 * $width;
+        height: 0.0275 * $width;
+    }
+
+    
+    .card-block__title {
+        font-size: 0.018725 * $width;
+        padding-bottom: 0.01625 * $width;
+    }
+    
+    .card-block__description {
+        padding-bottom: 0.01375 * $width;
+    }
+}
+
+@mixin featuresPhone() {
+
+    .features-section {
+        height: auto;
+    }
+    
+    .features-cards-wrap {
+        padding-top: 20vw;
+        margin-bottom: 20vw;
+        font-size: 3vw;
+    }
+    
+    .card-block {
+        width: 73vw;
+        padding-bottom: 2vw;
+    }
+
+    .card-block__image {
+        max-width: 100%;
+        padding-bottom: 10vw;
+        height: 8vw;
+    }
+
+    
+    .card-block__title {
+        font-size: 6vw;
+        padding-bottom: 4vw;
+    }
+    
+    .card-block__description {
+        padding-bottom: 4vw;
+    }
+}
+
+@mixin featuresScrollable {
+    .features-cards-wrap {
+        width: 73vw;
+        display: flex; 
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+    
+    .card-block {
+        flex: 0 0 auto;
+    }
+
+    .card-block + .card-block {
+        margin-left: 10vw;
+    }
+}
+
+@media (min-width: 1920px) {
+    @include features(2560px);
+}
+
+@media (min-width: 1680px) and (max-width: 1920px) {
+    @include features(1920px);
+}
+
+@media (min-width: 1536px) and (max-width: 1680px) {
+    @include features(1680px);
+}
+
+@media (min-width: 1367px) and (max-width: 1536px) {
+    @include features(1536px);
+}
+
+@media (min-width: 1280px) and (max-width: 1367px) {
+    @include features(1366px);
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+    @include features(1280px);
+}
+
+@media (max-width: 1024px) and (min-aspect-ratio: 13/9) {
+    @include features(1024px);
+    @include featuresScrollable();
+}
+
+@media (max-width: 1024px) and (max-aspect-ratio: 13/9) {
+    @include featuresScrollable();
+    @include featuresPhone();
+}
+
+
+
+
+
+/*
+
+.features-section {
+        height: 618px;
+    }
+    
+    .features-cards-wrap {
+        padding-top: 146px;
+        padding-bottom: 67px;
+        font-size: 0.0093625 * $width;
+    }
+    
+    .card-block {
+        width: 0.225 * $width;
+    }
+    
+    .card-block__image {
+        padding-bottom: 60px;
+    }
+    
+    .card-block__title {
+        font-size: 0.018725 * $width;
+        padding-bottom: 26px;
+    }
+    
+    .card-block__description {
+        padding-bottom: 22px;
+    }
+
+..features-cards-wrap {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.scrolling-bar {
+    width: 67px;
+    height: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.scrolling-bar__scroll-button {
+    border-radius: 50%;
+    background-color: rgb(172, 172, 172);
+    width: 10px;
+    height: 10px;
+}
+
+.scrolling-bar__scroll-button:hover {
+    background-color: rgb(93, 93, 93);
+    width: 14px;
+    height: 14px;
+}
+*/

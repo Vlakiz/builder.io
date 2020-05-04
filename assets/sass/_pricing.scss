@@ -1,0 +1,290 @@
+.pricing-section {
+    border-bottom: 1px solid #e7eaf1;
+    text-align: center;
+}
+
+.pricing-section__heading {
+    color: #8e75bd;
+}
+
+.pricing-section__title {
+    font-family: $font_main;
+    font-weight: 100;
+    margin: 0;
+}
+
+.pricing-section__subtitle {
+    font-family: $font_extra;
+    font-weight: 600;
+    margin: 0;
+}
+
+.account-cards-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.account-block {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+}
+
+.account-card {
+    display: flex;
+    flex-flow: column;
+    font-family: $font_button;
+}
+
+.account-card__heading {
+    background: #9178c1;
+
+    h5 {
+        background-image: linear-gradient( 90deg, rgba(0,0,0, 0.1) 0%, rgba(255,255,255, 0.1) 100%);
+        margin: 0px;
+        color: white;
+        font-family: 'NexaHeavy', 'sans-serif';
+        font-weight: 100;
+    }
+}
+
+.account-card__main {
+    height: 100%;
+    border: 2px solid #e6e9f0;
+    border-top: 0px;
+    flex: 1 1 auto;
+}
+
+.paid-card {
+
+    .account-card__main {
+        border: 3px solid #e1d9ef;
+        border-top: 0px;
+    }
+
+    .account-card__button {
+        background: #947cc3;
+        color: white;
+
+        &:hover {
+            background: url(./../img/button-bg.png);
+            background-size: 100%;
+        }
+    }
+}
+
+.account-card__decription {
+    margin: auto;
+    color: #8c8c8c;
+}
+
+.account-card__price {
+    color: #44c5c7;
+    position: relative;
+    margin: 0;
+}
+
+.account-card__period {
+    position: absolute;
+    color: #b7bfc5;
+    font-weight: 100;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 61%;
+}
+
+.account-card__list {
+    margin: auto;
+    color: #b7bfc5;
+}
+
+.account-card__list-line {
+    height: 2px;
+    background: #e7eaf1;
+}
+
+.account-card__button {
+    display: block;
+    border: solid 2px rgb(153, 128, 199);
+    border-radius: 3px;
+    margin: auto;
+    color: #967dc4;
+    background: white;
+
+    &:hover {
+        background: url(./../img/button-bg.png);
+        background-size: 100%;
+    }
+}
+
+.check-icon {
+    font-family: 'FontAwesome', 'fantasy';
+}
+
+.account-card__users {
+    font-family: $font_main;
+    color: #9ca0ab;
+}
+
+.account-card__users-count {
+    color: #947cc3;
+}
+
+@mixin pricing($width) {
+    
+    .pricing-section {
+        height: 0.648125 * $width;
+    }
+    
+    .pricing-section__heading {
+        margin: (0.05125 * $width) auto (0.02875 * $width);
+    }
+    
+    .pricing-section__title {
+        font-size: 0.021875 * $width;
+        margin-bottom: 0.009375 * $width;
+    }
+    
+    .pricing-section__subtitle {
+        font-size: 0.009375 * $width;
+    }
+    
+    .account-cards-wrap {
+        width: 0.5875 * $width;
+        height: 0.5 * $width;
+    }
+    
+    .account-card {
+        height: 0.436875 * $width;
+        width: 0.2875 * $width;
+        border-radius: 0.00625 * $width;
+        font-size: 0.01 * $width;
+    }
+    
+    .account-card__heading {
+        border-radius: (0.00625 * $width) (0.00625 * $width) 0 0;
+        height: 0.04625 * $width;
+    
+        h5 {
+            line-height: 0.04625 * $width;
+            font-size: 0.0125 * $width;
+        }
+    }
+    
+    .account-card__main {
+        border-radius: 0 0 (0.00625 * $width) (0.00625 * $width);
+        padding-top: 0.020625 * $width;
+    }
+    
+    .paid-card {
+        box-shadow: 0px 0px (0.018125 * $width) rgba(183,191,197, 0.3);
+    }
+    
+    .account-card__decription {
+        width: 0.175 * $width;
+    }
+    
+    .account-card__price {
+        font-size: 0.025 * $width;
+        margin-top: 0.01375 * $width;
+        margin-bottom: 0.010625 * $width;
+    }
+    
+    .account-card__period {
+        font-size: 0.01125 * $width;
+    }
+    
+    .account-card__list {
+        width: 0.2125 * $width;
+        height: 0.22375 * $width;
+        margin-bottom: 0.005625 * $width;
+
+        p {
+            margin: (0.0125 * $width) auto;
+        }
+    }
+    
+    .account-card__button {
+        width: 0.2125 * $width;
+        height: 0.038125 * $width;
+        line-height: 0.0375 * $width;
+    }
+    
+    .check-icon {
+        margin-left: 0.00625 * $width;
+    }
+    
+    .account-card__users {
+        font-size: 0.01125 * $width;
+        margin-top: 0.015 * $width;
+    }
+    
+    .account-card__users-count {
+        font-size: 0.013125 * $width;
+    }
+
+}
+
+@mixin pricingPhone() {
+    $width: 282vw;
+    
+    .pricing-section {
+        height: auto;
+    }
+    
+    .account-cards-wrap {
+        width: 90vw;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .account-block {
+        display: inline-block;
+    }
+    
+    .account-block:first-child {
+        margin-bottom: 8vw;
+    }
+    
+    .account-card {
+        margin: auto;
+    }
+
+    .account-block {
+        margin-bottom: 10vw;
+    }
+}
+
+@media (min-width: 1920px) {
+    @include pricing(2560px);
+}
+
+@media (min-width: 1680px) and (max-width: 1920px) {
+    @include pricing(1920px);
+}
+
+@media (min-width: 1536px) and (max-width: 1680px) {
+    @include pricing(1680px);
+}
+
+@media (min-width: 1367px) and (max-width: 1536px) {
+    @include pricing(1536px);
+}
+
+@media (min-width: 1280px) and (max-width: 1367px) {
+    @include pricing(1366px);
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+    @include pricing(1280px);
+}
+
+@media (max-width: 1024px) and (min-aspect-ratio: 13/9) {
+    @include pricing(1024px);
+}
+
+@media (max-width: 1024px) and (max-aspect-ratio: 13/9) {
+    @include pricing(282vw);
+    @include pricingPhone();
+}

@@ -1,0 +1,228 @@
+.video-section {
+    background: #9f88c9;
+    background-image: url(./../img/Layer_15.png);
+    background-size: 100%;
+}
+
+.banner-block {
+    background: url(./../img/Layer_15.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    box-shadow: inset 0px 7px 10px -9px rgba(0, 0, 0, 0.5);
+
+    a {
+        display: block;
+        font-family: $font_button;
+        color: white;
+        cursor: pointer;
+        border-radius: 3px;
+        text-align: center;
+        margin: 0px;
+    }
+}
+
+.banner-block__headline {
+    margin: auto;
+    color: white;
+    text-align: center;
+}
+
+.banner-block__title {
+    font-family: $font_main;
+    font-weight: 100;
+    margin: 0px;
+}
+
+.banner-block__description { 
+    margin: 0px;
+    font-family: $font_extra;
+    text-align: center;
+}
+
+.banner-block__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+
+    .banner-block__buy-button {
+        background-image: linear-gradient(to bottom, #4ac7ca, #3cbec1);
+        box-shadow: 0px 1px 1px #7963a3, inset 0px 1px 0px #81f5f8;
+        text-shadow: 0px 1px #32aeb1;
+        
+        &:hover {
+            background: url(./../img/banner-button-bg.png);
+            background-size: 100%;
+        }
+        
+        &:active {
+            box-shadow: 0px 2px #32abae, inset 0px 1px #81f5f8, 0 0 8px #e7eaf1;
+        }
+    }
+
+    .banner-block__demo-button {
+        border: solid 2px;
+
+        &:hover {
+            background: url(./../img/banner-button-bg2.png);
+            background-size: 100%;
+        }
+    }
+}
+  
+.video-block {
+    background: url(./../img/video-block.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    border-bottom: solid 1px #8466be;
+}
+
+.video-block__play-button {
+    position: absolute;
+    background: url(./../img/play.png);
+    background-size: 100%;
+    border-radius: 50%;
+
+    &:hover {
+        filter: brightness(0.7);
+    }
+
+    &:active {
+        box-shadow: 0 0 8px #e7eaf1, inset -5px -5px 8px #e7eaf1;;
+    }
+}
+
+@mixin video($width) {
+    
+    .banner-block {
+        height: 0.23125 * $width;
+
+        a {
+            width: 0.172482 * $width;
+            height: 0.040158 * $width;
+            line-height: 0.0395 * $width;
+        }
+    }
+    
+    .banner-block__headline {
+        width: 0.51875 * $width;
+        padding-top: 0.05 * $width;
+        padding-bottom: 0.03125 * $width;
+    }
+    
+    .banner-block__title {
+        font-size: 0.021875 * $width;
+        margin-bottom: 0.0125 * $width;
+    }
+    
+    .banner-block__description { 
+        font-size: 0.009375 * $width;
+    }
+
+    .banner-block__buttons {
+        padding-bottom: 0.052666 * $width;
+        width: 0.3311389 * $width;
+
+        .banner-block__demo-button {
+            width: 0.142857 * $width;
+            height: 0.038183 * $width;
+        }
+    }
+
+    .video-block {
+        height: 0.505625 * $width;
+        background-size: $width;
+    }
+    
+    .video-block__play-button {
+        width: 0.075 * $width;
+        height: 0.075 * $width;
+        top: 0.184375 * $width;
+    }
+}
+
+@mixin videoPhone() {
+
+    .banner-block {
+        background-size: 115vw;
+
+        a {
+            margin: auto;
+            width: 60vw;
+            height: 14vw;
+            line-height: 14vw;
+        }
+    }
+    
+    .banner-block__headline {
+        width: 90%;
+        padding-top: 10vw;
+        padding-bottom: 7vw;
+    }
+    
+    .banner-block__title {
+        font-size: 7vw;
+        margin-bottom: 2vw;
+    }
+    
+    .banner-block__description { 
+        font-size: 3vw;
+    }
+
+    .banner-block__buttons {
+        padding-bottom: 10vw;
+        width: 90vw;
+        flex-direction: column;
+
+        .banner-block__demo-button {
+            margin-top: 3vw;
+            width: 50vw;
+            height: 14vw;
+        }
+    }
+
+    .video-block {
+        height: 50.625vw;
+        background-size: 100vw;
+    }
+    
+    .video-block__play-button {
+        width: 15vw;
+        height: 15vw;
+        top: 18.4vw;
+    }  
+}
+
+@media (min-width: 1920px) {
+    @include video(2560px);
+}
+
+@media (min-width: 1680px) and (max-width: 1920px) {
+    @include video(1920px);
+}
+
+@media (min-width: 1536px) and (max-width: 1680px) {
+    @include video(1680px);
+}
+
+@media (min-width: 1367px) and (max-width: 1536px) {
+    @include video(1536px);
+}
+
+@media (min-width: 1280px) and (max-width: 1367px) {
+    @include video(1366px);
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+    @include video(1280px);
+}
+
+@media (max-width: 1024px) and (min-aspect-ratio: 13/9){
+    @include video(1024px);
+}
+
+@media (max-width: 1024px) and (max-aspect-ratio: 13/9) {
+    @include videoPhone();
+}
